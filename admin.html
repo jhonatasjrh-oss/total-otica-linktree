@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Ótica — Admin</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+<!-- ══ TOPBAR ══ -->
+<header class="topbar">
+  <div class="topbar-logo">⚙️ Total Ótica — Admin</div>
+  <a class="topbar-link" href="index.html">📱 Ver Linktree</a>
+</header>
+
+<!-- ══ CONTEÚDO ══ -->
+<main class="admin-wrap">
+
+  <h1 class="admin-title">Painel de Produtos</h1>
+  <p class="admin-sub">Adicione, edite ou remova produtos do seu Linktree</p>
+
+  <!-- ── FORMULÁRIO ── -->
+  <section class="admin-section">
+    <div class="admin-section-title">➕ Adicionar / Editar Produto</div>
+
+    <div class="form-row cols-2">
+      <div class="form-group">
+        <label for="inp-name">Nome do produto *</label>
+        <input type="text" id="inp-name" placeholder="Ex: Óculos de Grau Feminino">
+      </div>
+      <div class="form-group">
+        <label for="inp-price">Preço *</label>
+        <input type="text" id="inp-price" placeholder="Ex: A partir de R$ 249">
+      </div>
+    </div>
+
+    <div class="form-row cols-2">
+      <div class="form-group">
+        <label for="inp-wa">Mensagem WhatsApp (pré-definida)</label>
+        <input type="text" id="inp-wa" placeholder="Ex: Quero ver os óculos de grau feminino!">
+      </div>
+      <div class="form-group">
+        <label for="inp-cat">Categoria</label>
+        <select id="inp-cat">
+          <option value="Grau Feminino">Grau Feminino</option>
+          <option value="Grau Masculino">Grau Masculino</option>
+          <option value="Solar Feminino">Solar Feminino</option>
+          <option value="Solar Masculino">Solar Masculino</option>
+          <option value="Lentes de Contato">Lentes de Contato</option>
+          <option value="Infantil">Infantil</option>
+          <option value="Acessórios">Acessórios</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 1rem">
+      <label>Foto do produto</label>
+      <div class="img-upload-area" id="upload-area">
+        <div class="img-upload-text">
+          📷 Clique ou arraste uma foto aqui<br>
+          <small style="color: rgba(255,255,255,.2)">JPG, PNG ou WebP · máx 5MB</small>
+        </div>
+        <input type="file" accept="image/*" id="inp-img" onchange="previewImg(this)">
+        <img id="img-preview" class="img-preview" alt="preview">
+      </div>
+    </div>
+
+    <div class="form-row cols-2">
+      <div class="form-group">
+        <label>Exibir em destaque na aba Links?</label>
+        <div class="switch-row">
+          <span style="font-size:.85rem; color:var(--muted)">Sim, mostrar no topo</span>
+          <label class="switch">
+            <input type="checkbox" id="inp-featured">
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="form-group" style="justify-content: flex-end; align-items: flex-end">
+        <button class="btn btn-yellow btn-full" onclick="saveProduct()">
+          💾 Salvar Produto
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── LISTA DE PRODUTOS ── -->
+  <section class="admin-section">
+    <div class="admin-section-title">📦 Produtos Cadastrados</div>
+    <div id="admin-prod-list">
+      <!-- Renderizado pelo JS -->
+    </div>
+  </section>
+
+</main>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- JS -->
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

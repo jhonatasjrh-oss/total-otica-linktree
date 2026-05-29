@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Total Ótica — Links</title>
+  <meta name="description" content="Sua ótica em Anápolis com os melhores preços. Óculos de grau, solar e exame de vista gratuito.">
+  <meta property="og:title" content="Total Ótica">
+  <meta property="og:description" content="Sua ótica em Anápolis com os melhores preços.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* Variáveis extras do index */
+    :root {
+      --black: #0D0D0D;
+      --dark:  #1A1208;
+    }
+  </style>
+</head>
+<body>
+
+<div class="linktree-wrap">
+
+  <!-- ══ HERO ══ -->
+  <div class="hero">
+    <video autoplay muted loop playsinline>
+      <!--
+        INSTRUÇÃO: coloque o arquivo do vídeo gerado no Veo 3
+        dentro da pasta assets/video/ com o nome hero.mp4
+      -->
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-name">Total Ótica</h1>
+      <p class="hero-tagline">Sua ótica em Anápolis com os melhores preços</p>
+
+      <div class="social-row">
+        <a href="https://wa.me/5562993162521" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7
+                     8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8
+                     8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5
+                     a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/totaloticamais/" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+      </div>
+
+      <p class="followers">@totaloticamais</p>
+
+      <div class="tabs-row">
+        <button class="tab-btn active" onclick="switchTab('links')">Links</button>
+        <button class="tab-btn"        onclick="switchTab('shop')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CONTEÚDO ══ -->
+  <div class="lt-content">
+
+    <!-- ── ABA: LINKS ── -->
+    <div class="tab-panel active" id="tab-links">
+
+      <!-- Produtos em destaque (renderizado pelo JS) -->
+      <div id="pub-featured"></div>
+
+      <!-- Atendimento -->
+      <p class="sec-label">Atendimento</p>
+
+      <a class="link-card"
+         href="https://wa.me/5562993162521?text=Olá%2C%20vim%20pelo%20link%20e%20gostaria%20de%20atendimento!"
+         target="_blank">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7
+                     8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8
+                     8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5
+                     a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <div class="link-title">Fale com a gente</div>
+          <div class="link-sub">Atendimento via WhatsApp</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+      <a class="link-card"
+         href="https://wa.me/5562993162521?text=Olá%2C%20quero%20agendar%20um%20exame%20de%20vista!"
+         target="_blank">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8"  y1="2" x2="8"  y2="6"/>
+            <line x1="3"  y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <div class="link-title">Agendar Exame de Vista</div>
+          <div class="link-sub">Gratuito e sem compromisso</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+      <!-- Redes Sociais -->
+      <p class="sec-label">Siga a gente</p>
+
+      <a class="link-card"
+         href="https://www.instagram.com/totaloticamais/"
+         target="_blank">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <div class="link-title">@totaloticamais</div>
+          <div class="link-sub">Novidades e promoções todo dia</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+      <!-- Lojas -->
+      <p class="sec-label">Nossas Lojas</p>
+
+      <a class="link-card"
+         href="https://maps.google.com/?q=Avenida+Miguel+João+240+Anápolis"
+         target="_blank">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <div class="link-title">Loja 1 — Av. Miguel João, 240</div>
+          <div class="link-sub">Sala 03 · Anápolis, GO</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+      <a class="link-card"
+         href="https://maps.google.com/?q=Avenida+Xavier+de+Almeida+115+Anápolis"
+         target="_blank">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <div class="link-title">Loja 2 — Av. Xavier de Almeida, 115</div>
+          <div class="link-sub">Centro · Anápolis, GO</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+    </div><!-- /tab-links -->
+
+    <!-- ── ABA: SHOP ── -->
+    <div class="tab-panel" id="tab-shop">
+      <p class="sec-label" style="margin-top:.5rem">Nossa Coleção</p>
+      <div class="shop-grid" id="pub-shop-grid">
+        <!-- Renderizado pelo JS -->
+      </div>
+    </div>
+
+  </div><!-- /lt-content -->
+
+  <footer class="lt-footer">
+    <a href="#">Privacidade</a>
+    <a href="#">Sobre</a>
+    <a href="https://www.instagram.com/totaloticamais/" target="_blank">Instagram</a>
+    <a href="admin.html">Admin</a>
+  </footer>
+
+</div><!-- /linktree-wrap -->
+
+<!-- JS -->
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
