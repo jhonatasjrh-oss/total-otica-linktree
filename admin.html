@@ -4,12 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Total Ótica — Admin</title>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/admin.css">
 </head>
 <body>
@@ -17,7 +13,12 @@
 <!-- ══ TOPBAR ══ -->
 <header class="topbar">
   <div class="topbar-logo">⚙️ Total Ótica — Admin</div>
-  <a class="topbar-link" href="index.html">📱 Ver Linktree</a>
+  <div style="display:flex; gap:.75rem; align-items:center">
+    <a class="topbar-link" href="index.html">📱 Ver Linktree</a>
+    <button class="topbar-link" onclick="doLogout()" style="cursor:pointer; border:1px solid rgba(239,68,68,.4); color:#ef4444">
+      🚪 Sair
+    </button>
+  </div>
 </header>
 
 <!-- ══ CONTEÚDO ══ -->
@@ -107,6 +108,36 @@
 
 <!-- JS -->
 <script src="assets/js/app.js"></script>
+<script>
+  // ── PROTEÇÃO DE SESSÃO ────────────────────────
+  const SESSION_KEY = 'totalOticaAuth';
+
+  (function checkAuth() {
+    const session = localStorage.getItem(SESSION_KEY);
+    if (!session) {
+      window.location.href = 'login.html';
+      return;
+    }
+    try {
+      const { expiry } = JSON.parse(session);
+      if (Date.now() >= expiry) {
+        localStorage.removeItem(SESSION_KEY);
+        window.location.href = 'login.html';
+      }
+    } catch {
+      localStorage.removeItem(SESSION_KEY);
+      window.location.href = 'login.html';
+    }
+  })();
+
+  // ── LOGOUT ────────────────────────────────────
+  function doLogout() {
+    if (confirm('Deseja sair do painel?')) {
+      localStorage.removeItem(SESSION_KEY);
+      window.location.href = 'login.html';
+    }
+  }
+</script>
 
 </body>
 </html>
